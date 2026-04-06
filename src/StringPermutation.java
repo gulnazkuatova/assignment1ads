@@ -5,7 +5,7 @@ public class StringPermutation {
     }
 
     private static void permute(String prefix, String remaining) {
-        if (remaining.length() == 0) {
+        if (remaining.isEmpty()) {
             System.out.println(prefix);
             return;
         }

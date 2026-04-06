@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class DecimalBinary {
 
     public static String dec2bin(int n) {
@@ -7,12 +9,11 @@ public class DecimalBinary {
     }
 
     public static void main(String[] args) {
-        System.out.println("Decimal to Binary:");
+        Scanner sc = new Scanner(System.in);
 
-        int num1 = 10;
-        int num2 = 25;
+        System.out.print("Enter a decimal number: ");
+        int n = sc.nextInt();
 
-        System.out.println(num1 + " -> " + dec2bin(num1));
-        System.out.println(num2 + " -> " + dec2bin(num2));
+        System.out.println("Binary: " + dec2bin(n));
     }
 }
