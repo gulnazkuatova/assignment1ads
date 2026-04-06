@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class StringPermutation {
 
     public static void printPermutations(String s) {
@@ -5,7 +7,7 @@ public class StringPermutation {
     }
 
     private static void permute(String prefix, String remaining) {
-        if (remaining.isEmpty()) {
+        if (remaining.length() == 0) {
             System.out.println(prefix);
             return;
         }
@@ -17,7 +19,11 @@ public class StringPermutation {
     }
 
     public static void main(String[] args) {
-        System.out.println("Permutations of 'abc':");
-        printPermutations("abc");
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        printPermutations(s);
     }
 }
