@@ -1,5 +1,6 @@
-public class Fibonacci {
+import java.util.Scanner;
 
+public class Fibonacci {
     static int callCount = 0;
 
     public static int fib(int n) {
@@ -12,7 +13,10 @@ public class Fibonacci {
     }
 
     public static void main(String[] args) {
-        int n = 4;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Введите n: ");
+        int n = input.nextInt();
 
         callCount = 0;
 
